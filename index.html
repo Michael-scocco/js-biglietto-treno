@@ -45,16 +45,22 @@
             var sumKm = numberKm * priceKm;
             console.log(numberKm, priceKm, sumKm);
 
-            var ageMinor = 18;
-            var over65 = 65;
+            var sales20 = 20;
+            var division = sumKm / 100;// divido il prezzo a 100
+            var multi = division * sales20; // il risultato lo moltiplico per lo sconto
+            var subSales = sumKm - multi; // sottraggo il prezzo per chilometro con multi
+            console.log(sales20, division, multi,subSales)
 
-            if (ageMinor < 18){
-                console.log('apply the discount 20%')
-            }else if(over65 > 65){
-                console.log('apply the discount 40%')
-            }else{
-                console.log('nobody discount')
-            }
+            // var ageMinor = 18;
+            // var over65 = 65;
+            //
+            // if (ageMinor < 18){
+            //     console.log('apply the discount 20%');
+            // }else if(over65 > 65){
+            //     console.log('apply the discount 40%');
+            // }else{
+            //     console.log('nobody discount');
+            // }
 
         </script>
 
