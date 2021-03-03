@@ -45,22 +45,25 @@
             var sumKm = numberKm * priceKm;
             console.log(numberKm, priceKm, sumKm);
 
-            var sales20 = 20;
-            var division = sumKm / 100;// divido il prezzo a 100
-            var multi = division * sales20; // il risultato lo moltiplico per lo sconto
-            var subSales = sumKm - multi; // sottraggo il prezzo per chilometro con multi
-            console.log(sales20, division, multi,subSales)
-
-            // var ageMinor = 18;
-            // var over65 = 65;
-            //
-            // if (ageMinor < 18){
-            //     console.log('apply the discount 20%');
-            // }else if(over65 > 65){
-            //     console.log('apply the discount 40%');
-            // }else{
-            //     console.log('nobody discount');
-            // }
+            if (age < 18){
+                //regole sconto 20%
+                var sales20 = 20;
+                var division = sumKm / 100;// divido il prezzo(number * priceKm) a 100
+                var multi = division * sales20; // il risultato lo moltiplico per lo sconto
+                var subSales20 = sumKm - multi; // sottraggo il prezzo per chilometro con multi
+                console.log(sales20, division, multi,subSales20)
+                console.log('apply the discount 20%');
+            }else if(age > 65){
+                //regole sconto 40%
+                var sales40 = 40;
+                var division = sumKm / 100;// divido il prezzo(number * priceKm) a 100
+                var multi = division * sales40; // il risultato lo moltiplico per lo sconto
+                var subSales40 = sumKm - multi; // sottraggo il prezzo per chilometro con multi
+                console.log(sales20, division, multi,subSales40);
+                console.log('apply the discount 40%');
+            }else{
+                console.log('nobody discount');
+            }
 
         </script>
 
