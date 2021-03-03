@@ -22,8 +22,41 @@
                 <h1 id="title">CI SONO</h1>
             </div>
         </div>
+        <!-- GOAL:
+            Il programma dovrà chiedere all'utente il
+            numero di chilometri che vuole
+            percorrere e l'età del passeggero.
+            Sulla base di queste informazioni dovrà
+            calcolare il prezzo totale del viaggio.
+            Il prezzo del biglietto è definito in base ai
+            km (0.21 € al km), ma va applicato uno
+            sconto del 20% per i minorenni e del
+            40% per gli over 65.
+            N.B.: non badate al nome della repo,
+            i dati vanno acquisiti con la solita prompt -->
 
+        <script type="text/javascript">
 
+            var numberKm = prompt('how many km do want you to do');
+            var age = prompt('how old are you');
+            console.log(numberKm, age);
+
+            var priceKm = 0.21;
+            var sumKm = numberKm * priceKm;
+            console.log(numberKm, priceKm, sumKm);
+
+            var ageMinor = 18;
+            var over65 = 65;
+
+            if (ageMinor < 18){
+                console.log('apply the discount 20%')
+            }else if(over65 > 65){
+                console.log('apply the discount 40%')
+            }else{
+                console.log('nobody discount')
+            }
+
+        </script>
 
 
     </body>
