@@ -2,71 +2,18 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>js-biglietto-treno-form</title>
-
-        <style media="screen">
-            body{
-                background-color: red;
-                margin: 0 auto;
-                padding: 0;
-            }
-            .title{
-                text-align: center;
-            }
-        </style>
+        <title>js-biglietto-treno</title>
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
 
-        <div class="container">
-            <div class="title">
-                <h1 id="title">CI SONO</h1>
+        <div id="container">
+            <div id="text">
+                <h1 id="title"></h1>
+                <p id="par"></p>
             </div>
         </div>
-        <!-- GOAL:
-            Il programma dovrà chiedere all'utente il
-            numero di chilometri che vuole
-            percorrere e l'età del passeggero.
-            Sulla base di queste informazioni dovrà
-            calcolare il prezzo totale del viaggio.
-            Il prezzo del biglietto è definito in base ai
-            km (0.21 € al km), ma va applicato uno
-            sconto del 20% per i minorenni e del
-            40% per gli over 65.
-            N.B.: non badate al nome della repo,
-            i dati vanno acquisiti con la solita prompt -->
 
-        <script type="text/javascript">
-
-            var numberKm = prompt('how many km do want you to do');
-            var age = prompt('how old are you');
-            console.log(numberKm, age);
-
-            var priceKm = 0.21;
-            var sumKm = numberKm * priceKm;
-            console.log(numberKm, priceKm, sumKm);
-
-            if (age < 18){
-                //regole sconto 20%
-                var sales20 = 20;
-                var division = sumKm / 100;// divido il prezzo(number * priceKm) a 100
-                var multi = division * sales20; // il risultato lo moltiplico per lo sconto
-                var subSales20 = sumKm - multi; // sottraggo il prezzo per chilometro con multi
-                console.log(sales20, division, multi,subSales20)
-                console.log('apply the discount 20%');
-            }else if(age > 65){
-                //regole sconto 40%
-                var sales40 = 40;
-                var division = sumKm / 100;// divido il prezzo(number * priceKm) a 100
-                var multi = division * sales40; // il risultato lo moltiplico per lo sconto
-                var subSales40 = sumKm - multi; // sottraggo il prezzo per chilometro con multi
-                console.log(sales20, division, multi,subSales40);
-                console.log('apply the discount 40%');
-            }else{
-                console.log('nobody discount');
-            }
-
-        </script>
-
-
+        <script src="./js/esercizio-treno.js"></script>
     </body>
 </html>
